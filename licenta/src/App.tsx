@@ -11,7 +11,7 @@ import { Programare } from './components/Programare/Programare';
 
 export const App= ()=>{
  
-  const {
+    const {
     screens,
     headerVisible,
     headerTitle,
@@ -19,7 +19,6 @@ export const App= ()=>{
     navigateToClinics,
     navigateToHealthProblems,
     navigateToAppointment
-
    }=useApp();
   return (
     
