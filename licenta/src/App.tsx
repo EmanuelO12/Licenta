@@ -5,7 +5,7 @@ import { SiteHeader } from "./components/Header";
 import { HealthProblemPage } from "./components/HealthProblem/HealthProblemPage";
 import { Navigation } from "./components/Navigation";
 import { useApp } from "./components/StateFile";
-import { Programare } from "./components/Programare/Programare";
+import { Programare } from "./components/DetaliiClinica/DetaliiClinica";
 
 export const App = () => {
   const {

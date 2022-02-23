@@ -6,9 +6,6 @@ export interface Clinica {
 export interface Doctori {
     nume:string;
     prenume:string;
-    codParafa:number;
-    parola:string;
-
 }
 export interface Transporturi{
     data:string;
