@@ -4,7 +4,7 @@ export enum Screens {
   Loading,
   HealthProblem,
   Clinics,
-  Appointment,
+  ClinicDetails,
 }
 
 export const useApp = () => {
@@ -21,15 +21,15 @@ export const useApp = () => {
   };
   const navigateToHealthProblems = () => {
     setScreens(Screens.HealthProblem);
-    setBackButtonVisible(false); 
+    setBackButtonVisible(false);
     setHeaderVisible(true);
     setHeaderTitle("Diagnosticarea problemei");
   };
   const navigateToAppointment = () => {
-    setScreens(Screens.Appointment);
+    setScreens(Screens.ClinicDetails);
     setBackButtonVisible(true);
     setHeaderVisible(true);
-    setHeaderTitle("Appointment");
+    setHeaderTitle("Detalii Clinica");
   };
 
   return {
