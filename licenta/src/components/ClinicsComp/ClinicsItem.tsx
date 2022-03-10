@@ -6,26 +6,28 @@ import Typography from "@mui/material/Typography";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Divider from "@mui/material/Divider";
+import { Clinica } from "../../common/common";
 
 export interface ClinicsItemInterface {
-  nume: string;
-  adresa: string;
+  clinica: Clinica;
   navigateToAppointment: () => void;
+  setClinicaActuala: (clinica: Clinica) => void;
 }
 
 export const ClinicsItem = ({
-  nume,
-  adresa,
+  clinica,
   navigateToAppointment,
+  setClinicaActuala,
 }: ClinicsItemInterface) => {
+  setClinicaActuala(clinica);
   return (
     <div>
       <ListItem>
         <ListItemAvatar>
-          <Avatar src="https://userstock.io/data/wp-content/uploads/2020/06/women-s-white-and-black-button-up-collared-shirt-774909-2-1024x1024.jpg" />
+          <Avatar src={clinica.imagine} />
         </ListItemAvatar>
         <ListItemText
-          primary={nume}
+          primary={clinica.nume}
           secondary={
             <React.Fragment>
               <Typography
@@ -34,7 +36,7 @@ export const ClinicsItem = ({
                 variant="body2"
                 color="text.primary"
               ></Typography>
-              {adresa}
+              {clinica.adresa}
             </React.Fragment>
           }
         />

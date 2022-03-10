@@ -1,30 +1,34 @@
 export interface Clinica {
-   nume:string;
-   adresa:string;
+  nume: string;
+  descriere: string;
+  imagine: string;
+  adresa: string;
+  doctori: Doctori[];
+}
+
+export interface User {
+  nume: string;
+  prenume: string;
+  varsta: number;
+  diagnostic: string;
+  detalii: string;
+}
+
+export interface Programare {
+  pacient: User;
+  data_programarii: string;
+  detalii_aditionale: string;
 }
 
 export interface Doctori {
-    nume:string;
-    prenume:string;
-}
-export interface Transporturi{
-    data:string;
-    efectuat:boolean;
-}
-export interface StareRobot{
-    ocupat:string;
+  nume: string;
+  prenume: string;
+  programari: Programare[];
+  imagine: string;
+  descriere: string;
 }
 
-export interface Asistenta {
-    nume:string;
-    prenume:string;
-    parola:number;
-    numeUtilizator:string;
-}
-
-export interface Tratament {
-    pacientId:number;//schimbat cu pacientId
-    medicament:string;
-    pat:number;
-    diagnostic:string;
+export interface Optiuni {
+  value: string;
+  label: string;
 }

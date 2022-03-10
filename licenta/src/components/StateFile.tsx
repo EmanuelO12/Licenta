@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Clinica } from "../common/common";
 
 export enum Screens {
   Loading,
@@ -12,6 +13,7 @@ export const useApp = () => {
   const [headerVisible, setHeaderVisible] = useState<boolean>(true);
   const [headerTitle, setHeaderTitle] = useState("");
   const [backButtonVisible, setBackButtonVisible] = useState(false);
+  const [clinicaActuala, setClinicaActuala] = useState<Clinica>();
 
   const navigateToClinics = () => {
     setScreens(Screens.Clinics);
@@ -40,5 +42,7 @@ export const useApp = () => {
     navigateToClinics,
     navigateToHealthProblems,
     navigateToAppointment,
+    clinicaActuala,
+    setClinicaActuala,
   };
 };
