@@ -13,9 +13,9 @@ export const ListaDoctori = () => {
       }}
       style={{
         width: "100%",
-        maxWidth: 900,
-        marginTop: "100px",
-        marginLeft: "-150px",
+        maxWidth: 700,
+        marginTop: "30px",
+        marginLeft: "-220px",
       }}
       itemLayout="vertical"
       size="large"
@@ -27,7 +27,7 @@ export const ListaDoctori = () => {
         position: "bottom",
         simple: true,
         hideOnSinglePage: true,
-        style: { margin: "0px 230px 0px 0px" },
+        style: { margin: "0px 500px 0px 0px" },
       }}
       dataSource={mockedDoctori}
       renderItem={(doctor) => <DetaliiDoctor doctor={doctor}></DetaliiDoctor>}

@@ -5,7 +5,8 @@ import { SiteHeader } from "./components/Header";
 import { HealthProblemPage } from "./components/HealthProblem/HealthProblemPage";
 import { Navigation } from "./components/Navigation";
 import { useApp } from "./components/StateFile";
-import { Programare } from "./components/DetaliiClinica/DetaliiClinica";
+import { DetaliiClinica } from "./components/DetaliiClinica/DetaliiClinica";
+import { mockedClinici } from "./common/HardcodedData";
 
 export const App = () => {
   const {
@@ -16,6 +17,8 @@ export const App = () => {
     navigateToClinics,
     navigateToHealthProblems,
     navigateToAppointment,
+    setClinicaActuala,
+    clinicaActuala
   } = useApp();
   return (
     <div>
@@ -31,8 +34,8 @@ export const App = () => {
       <Navigation activeScreen={screens}>
         <Loading navigateToHealthProblems={navigateToHealthProblems}></Loading>
         <HealthProblemPage navigateToClinics={navigateToClinics} />
-        <Clinics navigateToAppointment={navigateToAppointment} />
-        <Programare navigateToClinics={navigateToClinics} />
+        <Clinics navigateToAppointment={navigateToAppointment} setClinicaActuala={setClinicaActuala} />
+        <DetaliiClinica navigateToClinics={navigateToClinics} imagine={clinicaActuala?.imagine} />
       </Navigation>
     </div>
   );

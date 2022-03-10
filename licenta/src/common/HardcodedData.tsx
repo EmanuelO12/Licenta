@@ -1,76 +1,110 @@
-import { Doctori, Clinica, StareRobot, Transporturi } from "./common";
+import { Doctori, Clinica, Programare, User, Optiuni } from "./common";
+
+export const mockedUser: User = {
+  nume: "Emanuel",
+  prenume: "Oltean",
+  varsta: 21,
+  diagnostic: "Picior Rupt",
+  detalii: "Ma doare piciorul",
+};
+
+export const mockedProgramari: Programare[] = [
+  {
+    pacient: mockedUser,
+    data_programarii: "12 mai 2022",
+    detalii_aditionale: mockedUser.detalii,
+  },
+];
+
+export const mockedDoctori: Doctori[] = [
+  {
+    nume: "Stefan",
+    prenume: "Carina",
+    programari: mockedProgramari,
+    imagine:
+      "https://www.publicdomainpictures.net/pictures/210000/velka/doctor-1490804718D0I.jpg",
+    descriere: `Aici e descrierea fiecarui doctooooor`,
+  },
+  {
+    nume: "Paul",
+    prenume: "",
+    programari: mockedProgramari,
+    imagine:
+      "https://www.publicdomainpictures.net/pictures/210000/velka/doctor-1490804718D0I.jpg",
+    descriere: `Aici e descrierea fiecarui doctooooor`,
+  },
+  {
+    nume: "Oltean",
+    prenume: "Emanuel",
+    programari: mockedProgramari,
+    imagine:
+      "https://www.publicdomainpictures.net/pictures/210000/velka/doctor-1490804718D0I.jpg",
+    descriere: `Aici e descrierea fiecarui doctooooor`,
+  },
+  {
+    nume: "Oltean",
+    prenume: "Emanuel",
+    programari: mockedProgramari,
+    imagine:
+      "https://www.publicdomainpictures.net/pictures/210000/velka/doctor-1490804718D0I.jpg",
+    descriere: `Aici e descrierea fiecarui doctooooor`,
+  },
+  {
+    nume: "Piscot5",
+    prenume: "Iscot",
+    programari: mockedProgramari,
+    imagine:
+      "https://www.publicdomainpictures.net/pictures/210000/velka/doctor-1490804718D0I.jpg",
+    descriere: `Aici e descrierea fiecarui doctooooor`,
+  },
+];
 
 export const mockedClinici: Clinica[] = [
   {
-    nume: "Popa",
+    nume: "Clinica 1",
     adresa: "Revolutiei 192",
+    descriere: "descriere",
+    imagine: "https://placekitten.com/400/400",
+    doctori: mockedDoctori,
   },
   {
-    nume: "Centru",
-    adresa: "albabala 12",
+    nume: "Clinica 2",
+    adresa: "Revolutiei 192",
+    descriere: "descriere",
+    imagine: "https://placekitten.com/400/400",
+    doctori: mockedDoctori,
   },
   {
-    nume: "CLINICA2",
-    adresa: "DA",
+    nume: "Clinica 3",
+    adresa: "Revolutiei 192",
+    descriere: "descriere",
+    imagine: "https://placekitten.com/400/400",
+    doctori: mockedDoctori,
   },
   {
-    nume: "Centru",
-    adresa: "albabala 12",
+    nume: "Clinica 4",
+    adresa: "Revolutiei 192",
+    descriere: "descriere",
+    imagine: "https://placekitten.com/400/400",
+    doctori: mockedDoctori,
   },
   {
-    nume: "CLINICA2",
-    adresa: "DA",
+    nume: "Clinica 5",
+    adresa: "Revolutiei 192",
+    descriere: "descriere",
+    imagine: "https://placekitten.com/400/400",
+    doctori: mockedDoctori,
   },
   {
-    nume: "Centru",
-    adresa: "albabala 12",
+    nume: "Clinica 6",
+    adresa: "Revolutiei 192",
+    descriere: "descriere",
+    imagine: "https://placekitten.com/400/400",
+    doctori: mockedDoctori,
   },
-  {
-    nume: "CLINICA2",
-    adresa: "DA",
-  },
-  {
-    nume: "Centru",
-    adresa: "albabala 12",
-  },
-  {
-    nume: "CLINICA2",
-    adresa: "DA",
-  },
-  {
-    nume: "Centru",
-    adresa: "albabala 12",
-  },
-  {
-    nume: "CLINICA2",
-    adresa: "DA",
-  },
-  {
-    nume: "Centru",
-    adresa: "albabala 12",
-  },
-  {
-    nume: "CLINICA2",
-    adresa: "DA",
-  },
-];
-export const mockedDoctori: Doctori[] = [
-  { nume: "Piscot1", prenume: "Iscot" },
-  { nume: "Piscot2", prenume: "Iscot" },
-  { nume: "Piscot3", prenume: "Iscot" },
-  { nume: "Piscot4", prenume: "Iscot" },
-  { nume: "Piscot5", prenume: "Iscot" },
 ];
 
-export const mockedTransport: Transporturi[] = [
-  { data: "12 mai 2021", efectuat: true },
-  { data: "14 mai 2021", efectuat: true },
-  { data: "13 mai 2021", efectuat: true },
-  { data: "13 mai 2021", efectuat: true },
-  { data: "13 mai 2021", efectuat: true },
-];
-export const stareRobotMocked: StareRobot[] = [
-  {
-    ocupat: "Online",
-  },
+export const mockedOptions: Optiuni[] = [
+  { value: "Picior Rupt", label: "picior_rupt" },
+  { value: "Durere de gat", label: "durere_gat" },
 ];

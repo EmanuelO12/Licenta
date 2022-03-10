@@ -2,11 +2,16 @@ import * as React from "react";
 import { ClinicsItem } from "./ClinicsItem";
 import { mockedClinici } from "../../common/HardcodedData";
 import { List } from "antd";
+import { Clinica } from "../../common/common";
 export interface ClinicsListProps {
   navigateToAppointment: () => void;
+  setClinicaActuala: (clinica: Clinica) => void;
 }
 
-export const ClinicsList = ({ navigateToAppointment }: ClinicsListProps) => {
+export const ClinicsList = ({
+  navigateToAppointment,
+  setClinicaActuala,
+}: ClinicsListProps) => {
   return (
     <List
       style={{ width: "100%", maxWidth: 900 }}
@@ -18,12 +23,13 @@ export const ClinicsList = ({ navigateToAppointment }: ClinicsListProps) => {
         },
         pageSize: 10,
       }}
+      
       dataSource={mockedClinici}
       renderItem={(item) => (
         <ClinicsItem
-          nume={item.nume}
-          adresa={item.adresa}
+          clinica={item}
           navigateToAppointment={navigateToAppointment}
+          setClinicaActuala={setClinicaActuala}
         />
       )}
     />

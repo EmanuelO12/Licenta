@@ -2,17 +2,22 @@ import * as React from "react";
 import { Image } from "antd";
 import { ListaDoctori } from "./ListaDoctori";
 
-export interface ProgramareProps {
+export interface DetaliiClinicaProps {
   navigateToClinics: () => void;
+  imagine: string | undefined;
 }
 
-export const Programare = ({ navigateToClinics }: ProgramareProps) => {
+export const DetaliiClinica = ({
+  navigateToClinics,
+  imagine,
+}: DetaliiClinicaProps) => {
   return (
     <div style={{ display: "flex", width: "100%" }}>
       <Image
-        style={{ marginLeft: "1500px", marginTop: "150px" }}
+        style={{ marginLeft: "1200px", marginTop: "150px" }}
         width={400}
-        src="https://www.dentistonline.ro/images/users_cabinete/568/cabinete_18.jpg"
+        src={imagine}
+        preview={false}
       />
       <ListaDoctori></ListaDoctori>
     </div>
